@@ -1,0 +1,81 @@
+/* styles.module.css */
+.navbar {
+    background-color: transparent;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 4px;
+    z-index: 50;
+  }
+  
+  .navbar .container {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+  }
+  
+  .navbar .logo {
+    flex: 0 0 auto;
+  }
+  
+  .navbar .logo img {
+    height: auto;
+    width: var(--logo-width, 400px); /* Set default logo width */
+  }
+  
+  .navbar .nav-links {
+    display: none; /* Initially hide for mobile */
+  }
+  
+  .navbar .nav-links.active {
+    display: flex; /* Show on mobile menu toggle */
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px; /* Add padding for better spacing */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  }
+  
+  .navbar .nav-links li {
+    text-align: center; /* Center text for mobile view */
+  }
+  
+  .navbar .nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    padding: 2px;
+    border-bottom: transparent;
+    transition: border-bottom 0.3s ease-in-out;
+  }
+  
+  .navbar .nav-links li a:hover {
+    border-bottom: 2px solid #7a1a4a;
+  }
+  
+  .navbar .nav-links li a.active {
+    border-bottom: 2px solid #7a1a4a; /* Highlight active link */
+  }
+  
+  .navbar .nav-toggle {
+    display: none; /* Initially hide for larger screens */
+    cursor: pointer;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar .nav-links {
+      display: flex; /* Show on larger screens */
+      gap: 10px;
+    }
+  
+    .navbar .nav-links li {
+      text-align: left; /* Left-align text for desktop */
+    }
+  
+    .navbar .nav-toggle {
+      display: block; /* Show toggle button on larger screens */
+    }
+  }
+  
